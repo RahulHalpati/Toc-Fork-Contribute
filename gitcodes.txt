@@ -1,0 +1,37 @@
+                        Steps to create local git repo
+git config --global user.name 'username'
+git config --global user.email 'email'
+git init                                (initlization)
+git add -A                              (Add File)
+git add (filename)                      (optional for specific file)
+.gitigore                              (this is a file name :-to ignore any files eg:- /*logs.log)
+git commit -m "(message)"               (git commit with local machine)
+git branch (branchname)                 (to create a new branch)
+git checkout (branchname)               (to switch branch)
+git merge (branchname)                  (to merge with master branch)(master main branch)
+git branch (--delete)/(-d) branchname   (to delete branch)
+git log                                 (to show all commits)
+git log --oneline                       (to show all commits in one line)
+git log -p (-1toN)                      (to check recents commits )
+git shortlog                            (to check short commits)
+git status                              (to check all git status)
+git status -s                           (to check recents file uploaded)
+git checkout -f                (to compare branch comparsion between newbranch with master branch)
+git checkout (filename)                 (to compare old & new file)
+git clean -i, -n ,-f                    (to remove all files from staging area)
+git rm --cached (filename)              (to remove specific file from staging area)
+git rm (filename)                       (to remove specific file from branch)
+                        SSH Local to GitHub Accout
+1)create github repo
+    git remote add (origin) (repo URL SSH)
+2)ssh key generate 
+    1)ssh-keygen -t (public key file name in /home/.ssh/edid_25519.pub) -C ("Username Or E-mail Address")
+    2)eval "$(ssh-agent -s)"              (to generate agent PID)
+    3)ssh-add ~/.ssh/id_ed25519
+    4)now add the generated public to github account 'Settings/SSH & GPG Keys/new SSH Keys/Addtitle/Add generated public key'
+    5)git remote add (origin) (git@github.com:muzammilcc/contactbook-php.git)
+    6)git remote set-url (origin) "git@github.com:muzammilcc/contactbook-php.git"
+    7)git remote -v             (virtual)
+    8)git push
+    8.)git push -u (origin) (master)
+    9)git pull
